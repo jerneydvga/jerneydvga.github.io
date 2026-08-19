@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everything about Jerney</title>
+<style>
+:root{
+  --bg:#07110d;--card:#0d1b15;--card2:#10231b;--text:#f3f7f4;
+  --muted:#a9b8b0;--accent:#63e69b;--accent2:#b5f7cf;
+  --line:rgba(255,255,255,.10);--max:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(99,230,155,.13),transparent 28%),
+    radial-gradient(circle at 10% 40%,rgba(99,230,155,.07),transparent 25%),var(--bg);
+  color:var(--text);line-height:1.7;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(92%,var(--max));margin:auto}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  backdrop-filter:blur(16px);background:rgba(7,17,13,.72);
+  border-bottom:1px solid var(--line)
+}
+.nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em;font-size:1.1rem}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:25px;font-size:.9rem;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.hero{display:grid;place-items:center;padding:120px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:55px;align-items:center}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+h1{
+  font-size:clamp(3.5rem,9vw,7.7rem);line-height:.86;
+  letter-spacing:-.075em;margin:18px 0 28px
+}
+h1 span{color:var(--accent)}
+.hero p{max-width:700px;color:var(--muted);font-size:1.08rem}
+.intro{
+  padding:45px;border:1px solid var(--line);border-radius:28px;
+  background:linear-gradient(145deg,rgba(16,35,27,.95),rgba(13,27,21,.95));
+}
+.intro h2{font-size:2rem;letter-spacing:-.04em;margin-bottom:15px}
+.intro p{color:var(--muted)}
+section{padding:90px 0}
+.section-title{font-size:2.5rem;letter-spacing:-.05em;margin-bottom:12px}
+.section-sub{color:var(--muted);max-width:700px;margin-bottom:32px}
+.topic-nav{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 55px}
+.topic-btn{
+  cursor:pointer;border:1px solid var(--line);background:var(--card);
+  color:var(--muted);padding:11px 17px;border-radius:999px;
+  font:inherit;font-weight:700;transition:.2s
+}
+.topic-btn:hover,.topic-btn.active{
+  color:#07110d;background:var(--accent);border-color:var(--accent);
+  transform:translateY(-2px)
+}
+.topic{
+  scroll-margin-top:95px;margin-bottom:25px;padding:32px;
+  border:1px solid var(--line);border-radius:24px;
+  background:linear-gradient(145deg,rgba(16,35,27,.95),rgba(13,27,21,.95));
+  transition:.25s;display:none
+}
+.topic.show{display:block}
+.topic-display{min-height:0}
+.topic:target{border-color:rgba(99,230,155,.45);box-shadow:0 0 35px rgba(99,230,155,.07)}
+.topic h3{font-size:1.65rem;margin-bottom:17px;letter-spacing:-.035em}
+.topic h3:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin:0 12px 4px 0}
+.topic p{color:var(--muted);margin-bottom:16px}
+.topic p:last-child{margin-bottom:0}
+footer{padding:35px 0 50px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+@media(max-width:800px){
+  .links{display:none}.hero-grid{grid-template-columns:1fr}
+  .hero{padding:110px 0 30px}
+  section{padding:65px 0}.intro{padding:28px}.topic{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">JERNEY<span>.</span></a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#topics">Explore</a>
+      <a href="#contact">End</a>
+    </div>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Personal story · 2008—present</div>
+      <h1>Everything<br>about <span>Jerney.</span></h1>
+      <p>
+        A collection of the things that shaped me, the things I love,
+        the things I do, and the way I see life.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="intro">
+      <div class="eyebrow">About Me</div>
+      <h2>Hi, I'm Jerney Edward C. de Vega!</h2>
+      <p>
+        I was born on August 29, 2008. I'm pretty much committed to everything I do,
+        and I've been doing it since I was 8 years old. I didn't get to enjoy my
+        childhood back then since I was busy studying music. My favorite color is
+        green, and it never changed. My hobbies are tech, drawing, editing, filming,
+        playing games, watching movies, listening to music, and playing the violin.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="topics">
+<div class="container">
+  <div class="eyebrow">Choose a chapter</div>
+  <h2 class="section-title">Get to know me</h2>
+  <p class="section-sub">
+    Pick whatever you want to know about me. Each button takes you directly to that part of my story.
+  </p>
+
+  <div class="topic-nav" role="tablist" aria-label="Topics about Jerney">
+    <button class="topic-btn" type="button" data-topic="favorites">Favorites</button>
+    <button class="topic-btn" type="button" data-topic="acads">Acads</button>
+    <button class="topic-btn" type="button" data-topic="games">Playing Games</button>
+    <button class="topic-btn" type="button" data-topic="movies-music">Movies & Music</button>
+    <button class="topic-btn" type="button" data-topic="violin">Violin</button>
+    <button class="topic-btn" type="button" data-topic="drawing">Drawing</button>
+    <button class="topic-btn" type="button" data-topic="editing">Editing</button>
+    <button class="topic-btn" type="button" data-topic="tech">Tech</button>
+    <button class="topic-btn" type="button" data-topic="attitude">My Attitude</button>
+    <button class="topic-btn" type="button" data-topic="love-life">Love Life</button>
+    <button class="topic-btn" type="button" data-topic="love-language">Love Language</button>
+  </div>
+
+  <div class="topic-display" aria-live="polite">
+  <article class="topic" id="favorites">
+    <h3>Favorites</h3>
+    <p>My favorite color is green. My favorite food is chicken and spaghetti. My favorite dessert is ice cream. My favorite song is “Mean It” by Lauv and LANY. My favorite subject is anything that has math. My favorite music artist is Lauv. My favorite fast food is McDonald’s. My favorite movie is Spider-Man: Brand New Day. My favorite game is Call of Duty: Mobile.</p>
+  </article>
+
+  <article class="topic" id="tech">
+    <h3>Tech</h3>
+    <p>Ever since I was a kid, I'm obsessed with iPhones, so I know a lot about them. Not Apple as a whole, but iPhones specifically. I know some of their other products, but my main focus has always been their phones. So you can ask me anything about iPhones, and I probably know it. I know their history, models, and sequence, lol.</p>
+  </article>
+
+  <article class="topic" id="drawing">
+    <h3>Drawing</h3>
+    <p>When I was a kid, I was also obsessed with art. I drew, but I'm not really good at it. I just draw whatever is on my mind. I used to do calligraphy, so I have a lot of art supplies like calligraphy pens, fine liners, different shades of pencils, markers, Speedballs, and etc. I was an art nerd before, but I'm not really good at it. I just love collecting art supplies.</p>
+    <p>As I grew older, I stopped caring about art. Then, in 2021, I finally had the courage to draw again. I drew an influencer, and that was my first portrait ever. Then in 2022, I drew my Lola, and in 2023, I drew my Lolo. In 2024, I drew my crush and sent it to her. In 2025, I drew Haerin from NewJeans, and I also drew my crush again, but better this time. Now, in 2026, I'm currently drawing my cousins. There are 7 of us in one frame, and I'm planning on giving it to them in December.</p>
+    <p>I never studied how to draw. I just feel like it and figure things out on my own.</p>
+  </article>
+
+  <article class="topic" id="editing">
+    <h3>Editing</h3>
+    <p>I edit and film our school projects, and I enjoy it whenever I have time.</p>
+  </article>
+
+  <article class="topic" id="games">
+    <h3>Playing Games</h3>
+    <p>I used to play Minecraft with my friends since 2014, and I stopped playing in June 2025.</p>
+    <p>For Call of Duty: Mobile, I started playing in October 2021, but I only played for about 2 years. I quit for a while, then I came back in March 2026, and I'm still pretty good at it. But then school came, so I quit again.</p>
+  </article>
+
+  <article class="topic" id="movies-music">
+    <h3>Movies and Music</h3>
+    <p>I watch rom-coms, old films, Marvel, DC, and K-dramas. But as of now, I no longer watch K-dramas since they're pretty unrealistic and could make me believe in fake scenarios. Although, they did influence me on how I should treat someone I love and respect.</p>
+    <p>I'm new to music since I really hated music back then because of my trauma, and I'll be discussing it later on.</p>
+    <p>In 2022, I used to be a Ben&Ben fan. Literally, I only listened to their songs for a year. Then, from 2023–2024, I became a K-pop fan, and my favorite group was NewJeans. I'm not a larper, though. I knew a lot of K-pop groups, and I used to listen to around 200–300 K-pop songs.</p>
+    <p>But then NewJeans stopped producing music, and I also stopped listening to K-pop. That's when I started finding my own music taste, and I realized that I liked soft pop. I'm a fan of Lauv and LANY since 2025, but I'm not really a fan-fan. I just listen to most of their songs, not all of them. I also listen to anything that I like or that I feel connected to.</p>
+  </article>
+
+  <article class="topic" id="violin">
+    <h3>Violin</h3>
+    <p>I started playing the violin in 2017. I really wasn't meant to play it, but then I got into it. I was forced to play it, and we were required to practice for 3 hours every day. Every Saturday, we also had a 3-hour lesson with Sir Dino.</p>
+    <p>So I didn't really get to enjoy my childhood until I got older. A lot of things happened during quarantine. We didn't get treated nicely back then. We would get scolded and shouted at, and I used to cry a lot when I was younger. That is why I became numb when I became a teenager.</p>
+    <p>As of now, I got to enjoy and love it. I've already accepted it, and now I appreciate playing the violin. We play at our church events, and we also play at outside events.</p>
+  </article>
+
+  <article class="topic" id="attitude">
+    <h3>About My Attitude</h3>
+    <p>I'm pretty numb since I got used to it and to everything. In terms of empathy, I'm really empathetic. I just don't think people deserve it sometimes, so I hold back and always try to ignore it since I've also experienced things before.</p>
+    <p>When I love something or someone, I give my very best. You'd be able to notice it. And when I hate or don't like someone, I show it to them, and you'd be able to feel it.</p>
+    <p>I don't take hints or anything. I want communication, and whatever you do means nothing to me unless you talk to me and are direct about it because I don't like assuming things.</p>
+    <p>I'm a "I don't care" person. I don't really care about anything unless I'm involved. I don't like greeting anyone unless we're that close. I also don't really have the initiative to do things, although I want to. I just forget sometimes, and I'm working on it, so don't be shy to tell me something when I should do it.</p>
+    <p>I love making things fun, so whenever you're with me, I always try my best to make sure everyone enjoys themselves. I also don't want anyone to be left out.</p>
+    <p>I'm a pretty cheap person, and I only spend my money when I really care about someone.</p>
+  </article>
+
+  <article class="topic" id="love-life">
+    <h3>Love Life</h3>
+    <p>I've never had a girlfriend in my life, and I've only had 3 crushes. One was in grade school, one in junior high school, and one in senior high school. I've also only had 1 situationship in my entire life.</p>
+    <p>Having a girlfriend wasn't really a priority for me. I wanted to be independent and earn my own money first. I do want to have my own family in the future, but if I don't become successful, I won't have one because that's my accountability. I don't want to include someone else in my struggles.</p>
+  </article>
+
+  <article class="topic" id="acads">
+    <h3>Acads</h3>
+    <p>When I was in kindergarten, I used to be a star pupil. But when I became an elementary student, I never really studied until Grade 8. It was only in Grade 9 when I started seriously studying.</p>
+    <p>So my knowledge is mostly from Grade 9 up until now because I'm aiming for scholarships, and I want to be successful in the future. Though, I'm really a lazy person, so if you know me, you know that I'm lazy.</p>
+  </article>
+
+  <article class="topic" id="love-language">
+    <h3>Love Language</h3>
+    <p>My love language is gift-giving. I love making gifts, so to everyone who has received a gift from me, it means you really mean something to me. I don't just make gifts randomly. I put effort into them because I'm a very sentimental person.</p>
+  </article>
+  </div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="intro">
+    <div class="eyebrow">The end</div>
+    <h2>That's pretty much everything.</h2>
+    <p>
+      Of course, there's always more to learn about a person. This is just my story
+      as I know it right now.
+    </p>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">© 2026 Jerney Edward C. de Vega · Everything about Jerney.</div>
+</footer>
+
+<script>
+  const topicButtons = document.querySelectorAll('.topic-btn');
+  const topics = document.querySelectorAll('.topic');
+
+  topicButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const topic = document.getElementById(button.dataset.topic);
+      const wasSelected = button.classList.contains('active');
+
+      topicButtons.forEach(btn => btn.classList.remove('active'));
+      topics.forEach(item => item.classList.remove('show'));
+
+      if (!wasSelected && topic) {
+        button.classList.add('active');
+        topic.classList.add('show');
+        topic.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
